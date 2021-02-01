@@ -41,7 +41,7 @@ use std::{io, env};
 use std::default::Default;
 use actix_cors::Cors;
 
-#[actix_rt::main]
+#[actix_web::main]
 async fn main() -> io::Result<()> {
     dotenv::dotenv().expect("Failed to read .env file");
     env::set_var("RUST_LOG", "actix_server=info,actix_web=warn");
